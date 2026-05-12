@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股市每日简报 2026年5月12日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #f5f6fa; padding: 12px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: #fff; padding: 20px; border-radius: 12px 12px 0 0; text-align: center; }
+        .header h1 { font-size: 20px; font-weight: 600; margin-bottom: 4px; }
+        .header .date { font-size: 13px; opacity: 0.8; }
+        .section { background: #fff; margin-bottom: 10px; padding: 16px; border-radius: 0 0 12px 12px; }
+        .section-title { font-size: 15px; font-weight: 600; color: #1a1a2e; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #e8e8e8; }
+        .section-title.red { border-bottom-color: #ff4d4f; color: #ff4d4f; }
+        .section-title.green { border-bottom-color: #52c41a; color: #52c41a; }
+        .section-title.gold { border-bottom-color: #faad14; color: #b8860b; }
+        .section-title.blue { border-bottom-color: #1890ff; color: #1890ff; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th, td { padding: 8px 6px; text-align: left; border-bottom: 1px solid #f0f0f0; }
+        th { background: #fafafa; font-weight: 500; color: #666; }
+        .up { color: #ff4d4f; }
+        .down { color: #52c41a; }
+        .neutral { color: #999; }
+        .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 11px; margin-left: 4px; }
+        .tag-hot { background: #fff1f0; color: #ff4d4f; }
+        .tag-cool { background: #f6ffed; color: #52c41a; }
+        .tag-warning { background: #fffbe6; color: #faad14; }
+        .summary { background: #fafafa; padding: 12px; border-radius: 8px; font-size: 13px; line-height: 1.8; }
+        .summary-item { margin-bottom: 8px; }
+        .summary-item:last-child { margin-bottom: 0; }
+        .source { font-size: 11px; color: #999; margin-top: 8px; }
+        .footer { text-align: center; padding: 12px; font-size: 11px; color: #999; }
+        .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .card { background: #fafafa; padding: 10px; border-radius: 8px; }
+        .card-title { font-size: 12px; color: #666; margin-bottom: 4px; }
+        .card-value { font-size: 18px; font-weight: 600; }
+        .card-value.up { color: #ff4d4f; }
+        .card-value.down { color: #52c41a; }
+        
+        /* 大白话总结 */
+        .plain-summary { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 16px; border-radius: 12px; margin-bottom: 10px; }
+        .plain-summary-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+        .plain-summary-item { display: flex; align-items: flex-start; padding: 6px 0; border-bottom: 1px rgba(255,255,255,0.2); font-size: 13px; line-height: 1.5; }
+        .plain-summary-item:last-child { border-bottom: none; }
+        .plain-summary-icon { font-size: 16px; margin-right: 8px; flex-shrink: 0; }
+        .plain-summary-label { color: rgba(255,255,255,0.7); margin-right: 4px; }
+        
+        /* 涨跌原因 */
+        .reason-box { background: #fafafa; padding: 10px 12px; border-radius: 8px; font-size: 13px; line-height: 1.7; margin: 8px 0; }
+        .reason-box strong { color: #1a1a2e; }
+        
+        /* 风险提示 */
+        .risk-box { background: #fffbe6; border-left: 3px solid #faad14; padding: 8px 12px; margin: 8px 0; border-radius: 0 4px 4px 0; font-size: 12px; }
+        .risk-box strong { color: #d48806; }
+        
+        /* 指数卡片 */
+        .index-row { display: flex; gap: 8px; margin-bottom: 10px; }
+        .index-card { flex: 1; background: #fff; padding: 12px; border-radius: 8px; text-align: center; }
+        .index-name { font-size: 11px; color: #666; }
+        .index-val { font-size: 16px; font-weight: 600; color: #1a1a2e; }
+        .index-chg { font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 股市每日简报</h1>
+            <div class="date">2026年5月12日 · 收盘版</div>
+        </div>
+        
+        <!-- 指数概览 -->
+        <div class="section" style="padding:12px 16px;">
+            <div class="index-row">
+                <div class="index-card">
+                    <div class="index-name">上证指数</div>
+                    <div class="index-val">4214.49</div>
+                    <div class="index-chg down">-0.25%</div>
+                </div>
+                <div class="index-card">
+                    <div class="index-name">深证成指</div>
+                    <div class="index-val">15824.92</div>
+                    <div class="index-chg down">-0.47%</div>
+                </div>
+                <div class="index-card">
+                    <div class="index-name">创业板指</div>
+                    <div class="index-val">3934.88</div>
+                    <div class="index-chg up">+0.15%</div>
+                </div>
+            </div>
+            <div style="font-size:12px;color:#666;text-align:center;">两市成交额3.24万亿元</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title blue">💰 主力资金净流入板块</div>
+            <table>
+                <thead>
+                    <tr><th>板块</th><th>今日涨幅</th><th>资金状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>电网设备<span class="tag tag-hot">今日热点</span></td>
+                        <td class="up">+1.98%</td>
+                        <td><span class="tag tag-hot">主力净流入</span></td>
+                    </tr>
+                    <tr>
+                        <td>非金属材料<span class="tag tag-hot">今日最强</span></td>
+                        <td class="up">+6.26%</td>
+                        <td><span class="tag tag-hot">主力净流入</span></td>
+                    </tr>
+                    <tr>
+                        <td>通信设备<span class="tag tag-cool">光纤概念</span></td>
+                        <td class="up">+3.43%</td>
+                        <td><span class="tag tag-hot">主力净流入</span></td>
+                    </tr>
+                    <tr>
+                        <td>电力行业</td>
+                        <td class="up">+1.5%</td>
+                        <td><span class="tag tag-hot">主力净流入</span></td>
+                    </tr>
+                    <tr>
+                        <td>公用事业</td>
+                        <td class="up">+0.8%</td>
+                        <td><span class="tag tag-hot">主力净流入</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title red">🔴 主力资金净流出板块</div>
+            <table>
+                <thead>
+                    <tr><th>板块</th><th>今日跌幅</th><th>资金状态</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>航天装备<span class="tag tag-warning">前期涨幅过大</span></td>
+                        <td class="down">-3.25%</td>
+                        <td><span class="tag tag-cool">主力净流出</span></td>
+                    </tr>
+                    <tr>
+                        <td>养殖业</td>
+                        <td class="down">-3.22%</td>
+                        <td><span class="tag tag-cool">主力净流出</span></td>
+                    </tr>
+                    <tr>
+                        <td>能源金属</td>
+                        <td class="down">-2.8%</td>
+                        <td><span class="tag tag-cool">主力净流出</span></td>
+                    </tr>
+                    <tr>
+                        <td>稀土概念</td>
+                        <td class="down">-2.5%</td>
+                        <td><span class="tag tag-cool">主力净流出</span></td>
+                    </tr>
+                    <tr>
+                        <td>锂电池</td>
+                        <td class="down">-1.8%</td>
+                        <td><span class="tag tag-cool">主力净流出</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title blue">📈 电网设备板块分析</div>
+            <div class="reason-box">
+                <strong>今日表现：</strong>电网设备板块震荡拉升，太阳电缆、汉缆股份、大连电瓷涨停。电网设备ETF华夏涨超2%。
+            </div>
+            <div class="reason-box">
+                <strong>上涨原因：</strong>特高压项目建设提速，国家电网2026年投资规模创新高。特高压概念持续受到资金追捧。
+            </div>
+            <div class="reason-box">
+                <strong>代表股票：</strong>太阳电缆(+10%)、汉缆股份(+10%)、大连电瓷(+10%)、通光线缆等。
+            </div>
+            <div class="source">数据来源：新浪财经、东方财富（2026-05-12）</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title blue">📈 半导体板块分析</div>
+            <div class="reason-box">
+                <strong>今日表现：</strong>科创半导体设备ETF华泰柏瑞上涨3.76%领涨，芯源微涨超16%，晶升股份涨13.47%，华海清科涨8.12%。
+            </div>
+            <div class="reason-box">
+                <strong>上涨原因：</strong>AI算力需求爆发，带动半导体设备需求。科创板半导体材料设备指数上涨3.15%。三星被曝重新评估芯片投资计划，市场预期芯片需求回暖。
+            </div>
+            <div class="reason-box">
+                <strong>机构观点：</strong>多家券商研报看好半导体设备国产替代，认为AI芯片需求将持续增长。
+            </div>
+            <div class="source">数据来源：证券时报、东方财富（2026-05-12）</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title gold">🥇 黄金/贵金属板块</div>
+            <div class="reason-box">
+                <strong>今日表现：</strong>黄金股ETF华安收跌0.4%，在同类基金中跌幅最小。黄金板块整体偏弱。
+            </div>
+            <div class="reason-box">
+                <strong>近期走势：</strong>黄金近期在高位震荡，国际金价维持在2300美元/盎司附近。
+            </div>
+            <div class="reason-box">
+                <strong>机构观点：</strong>美联储降息预期反复，黄金短期可能继续震荡。长期来看，全球央行购金和地缘风险支撑金价。
+            </div>
+            <div class="source">数据来源：金投网、东方财富（2026-05-12）</div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title blue">📋 综合结论</div>
+            <div class="summary">
+                <div class="summary-item">• <strong>整体格局：</strong>大盘震荡分化，沪指小跌0.25%，创业板微涨0.15%</div>
+                <div class="summary-item">• <strong>资金动向：</strong>主力资金从航天、养殖等板块撤出，流入电网设备、半导体设备</div>
+                <div class="summary-item">• <strong>热点切换：</strong>市场风格偏向科技成长，半导体设备持续强势</div>
+                <div class="summary-item">• <strong>操作建议：</strong>控制仓位，不追高，关注回调后的机会</div>
+            </div>
+        </div>
+        
+        <!-- 大白话总结 -->
+        <div class="plain-summary">
+            <div class="plain-summary-title">🎯 大白话总结（普通人能看懂的说法）</div>
+            
+            <div class="plain-summary-item">
+                <span class="plain-summary-icon">📊</span>
+                <span><span class="plain-summary-label">今天整体：</span>大盘小跌，创业板小涨，电网和半导体涨得不错</span>
+            </div>
+            
+            <div class="plain-summary-item">
+                <span class="plain-summary-icon">🔥</span>
+                <span><span class="plain-summary-label">谁涨最多：</span>非金属材料涨了6%+，电网设备涨了2%，半导体设备涨了3.7%</span>
+            </div>
+            
+            <div class="plain-summary-item">
+                <span class="plain-summary-icon">❄️</span>
+                <span><span class="plain-summary-label">谁跌最多：</span>航天装备跌了3%+，养殖业（猪肉）跌了3%+</span>
+            </div>
+            
+            <div class="plain-summary-item">
+                <span class="plain-summary-icon">💡</span>
+                <span><span class="plain-summary-label">为什么：</span>AI太火了，带动芯片厂买设备，芯片股涨；国家要加大电网投资，电力股跟着涨</span>
+            </div>
+            
+            <div class="plain-summary-item">
+                <span class="plain-summary-icon">✅</span>
+                <span><span class="plain-summary-label">普通人建议：</span>半导体基金可以继续持有，等涨多了再考虑卖；电网基金可以等回调再买</span>
+            </div>
+            
+            <div class="plain-summary-item">
+                <span class="plain-summary-icon">⚠️</span>
+                <span><span class="plain-summary-label">要小心：</span>大盘整体偏弱，别追高，小心被套</span>
+            </div>
+        </div>
+        
+        <div class="footer">
+            由 OpenClaw 自动生成 · 数据来源：东方财富、证券时报、财联社、新浪财经<br>
+            生成时间：2026-05-12 20:00 · 数据仅供参考，不构成投资建议
+        </div>
+    </div>
+</body>
+</html>

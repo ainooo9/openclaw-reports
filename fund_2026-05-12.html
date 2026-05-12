@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基金日报 2026年5月12日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height: 100vh; padding: 12px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        
+        /* 头部 */
+        .header { background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); backdrop-filter: blur(10px); color: #fff; padding: 20px 16px; border-radius: 16px; text-align: center; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .header h1 { font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+        .header .date { font-size: 13px; opacity: 0.8; }
+        
+        /* 总体概览 */
+        .overview { background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08)); backdrop-filter: blur(10px); padding: 16px; border-radius: 16px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.1); }
+        .overview-title { font-size: 13px; color: rgba(255,255,255,0.7); margin-bottom: 8px; }
+        .overview-total { font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+        .overview-total.up { color: #ff6b6b; }
+        .overview-total.down { color: #51cf66; }
+        .overview-rate { font-size: 13px; color: rgba(255,255,255,0.7); }
+        .overview-rate span { font-weight: 600; color: #fff; }
+        
+        /* 单只基金卡片 */
+        .fund-card { background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06)); backdrop-filter: blur(10px); margin-bottom: 12px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); }
+        .fund-header { padding: 14px 16px; background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; }
+        .fund-name { font-size: 15px; font-weight: 600; color: #fff; }
+        .fund-code { font-size: 11px; color: rgba(255,255,255,0.5); margin-left: 8px; }
+        .fund-action { padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .fund-action.buy { background: rgba(255,107,107,0.2); color: #ff6b6b; border: 1px solid rgba(255,107,107,0.3); }
+        .fund-action.hold { background: rgba(81,207,102,0.2); color: #51cf66; border: 1px solid rgba(81,207,102,0.3); }
+        .fund-action.watch { background: rgba(255,211,71,0.2); color: #ffd347; border: 1px solid rgba(255,211,71,0.3); }
+        .fund-action.sell { background: rgba(255,107,107,0.2); color: #ff6b6b; border: 1px solid rgba(255,107,107,0.3); }
+        
+        .fund-body { padding: 14px 16px; }
+        .fund-row { display: flex; justify-content: space-between; padding: 5px 0; font-size: 13px; }
+        .fund-row-label { color: rgba(255,255,255,0.6); }
+        .fund-row-value { font-weight: 500; color: #fff; }
+        .fund-row-value.up { color: #ff6b6b; }
+        .fund-row-value.down { color: #51cf66; }
+        
+        /* 涨跌金额 */
+        .profit-box { background: rgba(255,255,255,0.05); margin: 12px -16px -14px -16px; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.08); }
+        .profit-label { font-size: 12px; color: rgba(255,255,255,0.6); }
+        .profit-value { font-size: 16px; font-weight: 700; }
+        .profit-value.up { color: #ff6b6b; }
+        .profit-value.down { color: #51cf66; }
+        
+        /* 原因分析 */
+        .reason-section { background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); backdrop-filter: blur(10px); padding: 16px; margin-bottom: 12px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        .reason-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 10px; }
+        .reason-text { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.7; }
+        
+        /* 大白话总结 */
+        .summary-section { background: linear-gradient(135deg, #667eea, #764ba2); padding: 18px; border-radius: 16px; margin-bottom: 12px; }
+        .summary-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .summary-item { display: flex; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2); font-size: 13px; line-height: 1.6; color: #fff; }
+        .summary-item:last-child { border-bottom: none; }
+        .summary-icon { font-size: 18px; margin-right: 10px; flex-shrink: 0; }
+        .summary-content strong { display: block; margin-bottom: 2px; }
+        
+        /* 操作建议 */
+        .action-section { background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); backdrop-filter: blur(10px); padding: 16px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
+        .action-title { font-size: 14px; font-weight: 600; color: #fff; margin-bottom: 12px; }
+        .action-table { width: 100%; border-collapse: collapse; font-size: 12px; color: #fff; }
+        .action-table th { background: rgba(255,255,255,0.1); padding: 10px 8px; text-align: left; font-weight: 500; color: rgba(255,255,255,0.7); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .action-table td { padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,0.08); vertical-align: top; }
+        .action-table tr:last-child td { border-bottom: none; }
+        .action-tag { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 11px; font-weight: 600; }
+        .action-tag.buy { background: rgba(255,107,107,0.2); color: #ff6b6b; }
+        .action-tag.hold { background: rgba(81,207,102,0.2); color: #51cf66; }
+        .action-tag.watch { background: rgba(255,211,71,0.2); color: #ffd347; }
+        
+        /* 数据来源 */
+        .source { background: rgba(255,255,255,0.05); padding: 12px 16px; font-size: 11px; color: rgba(255,255,255,0.4); border-radius: 12px; margin-top: 12px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>💰 基金日报</h1>
+            <div class="date">2026年5月12日（周二）· 收盘更新</div>
+        </div>
+        
+        <!-- 总体概览 -->
+        <div class="overview">
+            <div class="overview-title">今日总收益</div>
+            <div class="overview-total up">+665元</div>
+            <div class="overview-rate">
+                持仓总价值 <span>140,993</span> 元 | 
+                累计收益 <span>+35,993</span> 元 (+34.24%)
+            </div>
+        </div>
+        
+        <!-- 基金1：半导体 -->
+        <div class="fund-card">
+            <div class="fund-header">
+                <div>
+                    <span class="fund-name">国联安半导体ETF联接C</span>
+                    <span class="fund-code">007301</span>
+                </div>
+                <span class="fund-action hold">持有</span>
+            </div>
+            <div class="fund-body">
+                <div class="fund-row">
+                    <span class="fund-row-label">确认净值（5/11）</span>
+                    <span class="fund-row-value">3.8240</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">估算净值</span>
+                    <span class="fund-row-value">3.8424</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">今日涨跌</span>
+                    <span class="fund-row-value up">+0.48%</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">持仓金额</span>
+                    <span class="fund-row-value">40,000元</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">累计收益</span>
+                    <span class="fund-row-value up">+10,568元 (+26.42%)</span>
+                </div>
+                <div class="profit-box">
+                    <span class="profit-label">今日估算收益</span>
+                    <span class="profit-value up">+192元</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 基金2：AI -->
+        <div class="fund-card">
+            <div class="fund-header">
+                <div>
+                    <span class="fund-name">融通人工智能指数(LOF)A</span>
+                    <span class="fund-code">161631</span>
+                </div>
+                <span class="fund-action hold">持有</span>
+            </div>
+            <div class="fund-body">
+                <div class="fund-row">
+                    <span class="fund-row-label">确认净值（5/11）</span>
+                    <span class="fund-row-value">3.0467</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">估算净值</span>
+                    <span class="fund-row-value">3.0705</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">今日涨跌</span>
+                    <span class="fund-row-value up">+0.78%</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">持仓金额</span>
+                    <span class="fund-row-value">60,000元</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">累计收益</span>
+                    <span class="fund-row-value up">+25,368元 (+42.28%)</span>
+                </div>
+                <div class="profit-box">
+                    <span class="profit-label">今日估算收益</span>
+                    <span class="profit-value up">+468元</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 基金3：黄金 -->
+        <div class="fund-card">
+            <div class="fund-header">
+                <div>
+                    <span class="fund-name">华安黄金ETF联接C</span>
+                    <span class="fund-code">000217</span>
+                </div>
+                <span class="fund-action hold">持有</span>
+            </div>
+            <div class="fund-body">
+                <div class="fund-row">
+                    <span class="fund-row-label">确认净值（5/12）</span>
+                    <span class="fund-row-value">3.4721</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">估算净值</span>
+                    <span class="fund-row-value">3.4754</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">今日涨跌</span>
+                    <span class="fund-row-value up">+0.10%</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">持仓金额</span>
+                    <span class="fund-row-value">5,000元</span>
+                </div>
+                <div class="fund-row">
+                    <span class="fund-row-label">累计收益</span>
+                    <span class="fund-row-value up">+57元 (+1.14%)</span>
+                </div>
+                <div class="profit-box">
+                    <span class="profit-label">今日估算收益</span>
+                    <span class="profit-value up">+5元</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 今日涨跌原因 -->
+        <div class="reason-section">
+            <div class="reason-title">📢 今日为什么涨/跌？</div>
+            <div class="reason-text">
+                <b>半导体：</b>今天半导体板块走势分化，设备股大涨（科创半导体ETF涨3.61%），但芯片设计股小跌。韩国三星宣布恢复半导体研发投资，设备厂商直接受益，带动你持有的半导体ETF上涨。<br><br>
+                <b>人工智能：</b>AI板块表现强劲！光模块龙头中际旭创股价突破1000元大关（A股史上第10只千元股），AI算力概念股集体拉升，寒武纪等成分股表现亮眼，带动AI指数上涨。<br><br>
+                <b>黄金：</b>黄金今天小涨0.10%，整体在高位震荡。国际金价目前维持在较高水平，但上涨动力有所减弱。
+            </div>
+        </div>
+        
+        <!-- 大白话总结 -->
+        <div class="summary-section">
+            <div class="summary-title">🎯 今天怎么做？（大白话总结）</div>
+            <div class="summary-item">
+                <span class="summary-icon">📋</span>
+                <div class="summary-content">
+                    <strong>总体结论：</strong>三个基金今天都涨了！你整体赚钱了，其中AI基金涨最多（+468元），半导体其次（+192元），黄金小赚（+5元）。
+                </div>
+            </div>
+            <div class="summary-item">
+                <span class="summary-icon">💡</span>
+                <div class="summary-content">
+                    <strong>原因：</strong>三星说要重新大笔投资芯片研发，芯片设备股直接受益大涨；中际旭创成为A股第10只千元股，说明AI算力板块很火，资金都在往里冲。
+                </div>
+            </div>
+            <div class="summary-item">
+                <span class="summary-icon">✅</span>
+                <div class="summary-content">
+                    <strong>今天建议：</strong>今天三个基金都继续持有，不买不卖。半导体已经涨了不少（近2天主力资金净流入1.65亿），短线可能震荡，等回调再考虑加仓。
+                </div>
+            </div>
+            <div class="summary-item">
+                <span class="summary-icon">⚠️</span>
+                <div class="summary-content">
+                    <strong>注意：</strong>你现在科技基金占比95%（半导体+AI），黄金只有5%。科技基金涨得快跌得也快，如果市场风向变了会亏得比较多。建议等AI涨到50%左右收益时，可以考虑卖出一部分落袋为安。
+                </div>
+            </div>
+        </div>
+        
+        <!-- 操作建议表 -->
+        <div class="action-section">
+            <div class="action-title">📝 详细操作建议</div>
+            <table class="action-table">
+                <thead>
+                    <tr>
+                        <th>基金</th>
+                        <th>操作</th>
+                        <th>理由</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>007301<br/><span style="color:rgba(255,255,255,0.5);font-size:10px">半导体</span></td>
+                        <td><span class="action-tag hold">持有</span></td>
+                        <td>设备股强势，短线多头趋势强，继续持有等涨</td>
+                    </tr>
+                    <tr>
+                        <td>161631<br/><span style="color:rgba(255,255,255,0.5);font-size:10px">AI</span></td>
+                        <td><span class="action-tag hold">持有</span></td>
+                        <td>成分股中际旭创破千，AI赛道持续火热</td>
+                    </tr>
+                    <tr>
+                        <td>000217<br/><span style="color:rgba(255,255,255,0.5);font-size:10px">黄金</span></td>
+                        <td><span class="action-tag hold">持有</span></td>
+                        <td>高位震荡，小幅上涨，作为组合稳定器</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 数据来源 -->
+        <div class="source">
+            数据来源：天天基金网、东方财富、中金在线 | 生成时间：2026-05-12 23:56<br/>
+            仅供参考，不构成投资建议
+        </div>
+    </div>
+</body>
+</html>
