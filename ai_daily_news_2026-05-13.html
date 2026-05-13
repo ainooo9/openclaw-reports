@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI科技早报 | 2026年5月13日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #16213e 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+        .header .date {
+            color: #888;
+            font-size: 1.1em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title.international {
+            border-color: #00d4ff;
+        }
+        .section-title.domestic {
+            border-color: #ff6b6b;
+        }
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .international .section-title::before {
+            background: #00d4ff;
+            box-shadow: 0 0 10px #00d4ff;
+        }
+        .domestic .section-title::before {
+            background: #ff6b6b;
+            box-shadow: 0 0 10px #ff6b6b;
+        }
+        .news-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .news-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        }
+        .news-card:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-2px);
+        }
+        .news-card h3 {
+            font-size: 1.15em;
+            color: #fff;
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .news-card .summary {
+            color: #aaa;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+        }
+        .news-card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            color: #666;
+        }
+        .news-card .source {
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            font-size: 0.9em;
+        }
+        .footer a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            .news-card {
+                padding: 20px;
+            }
+            .news-card .meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI科技早报</h1>
+            <p class="date">2026年5月13日 · 星期三</p>
+        </div>
+
+        <div class="section international">
+            <h2 class="section-title international">🌍 国际AI要闻</h2>
+            
+            <div class="news-card">
+                <h3>Anthropic洽谈融资300亿美元，估值超9000亿美元</h3>
+                <p class="summary">据知情人士透露，开发Claude模型的人工智能公司Anthropic正与投资者展开初步磋商，计划在新一轮融资中募资至少300亿美元，可能成为该公司迄今规模最大的一轮融资。目前讨论以超过9000亿美元的投前估值进行融资，本轮融资最快可能在本月底完成。此前报道称Anthropic正考虑最早于10月进行首次公开募股。随着产品需求不断增长，公司需要通过交易来支付算力基础设施成本。</p>
+                <div class="meta">
+                    <span class="source">新浪财经</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>Medicare全新支付模式专为AI设计，科技界大多数人尚不知情</h3>
+                <p class="summary">美国医疗保险和医疗补助服务中心（CMS）推出名为"绝对确定性CMS承诺支付"（ACCESS）的新支付模式，专门为AI医疗应用设计。该模式首次为监控患者院外状态、协调医疗服务、确保患者遵医嘱用药的AI智能体提供报销机制。业内人士指出，大多数科技公司对这一变革性政策一无所知，这可能为AI医疗健康初创企业带来巨大机遇。</p>
+                <div class="meta">
+                    <span class="source">TechCrunch</span>
+                    <span>2026-05-12</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>马斯克曾提议将OpenAI交给其孩子，奥特曼作证披露</h3>
+                <p class="summary">在针对OpenAI的诉讼庭审中，OpenAI CEO山姆·奥特曼首次出庭作证。奥特曼透露，马斯克曾提议将OpenAI交给他的孩子们管理。奥特曼表示，马斯克对早期营利性结构的关注让他犹豫，因为OpenAI致力于防止先进AI落入单一个人控制。奥特曼还提到，他认识一些 Y Combinator 的创始人，知道"创始人拥有控制权后通常不会放弃"。</p>
+                <div class="meta">
+                    <span class="source">TechCrunch</span>
+                    <span>2026-05-12</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>谷歌首次发现攻击者利用AI开发"零日漏洞"攻击工具</h3>
+                <p class="summary">谷歌威胁情报小组发布报告称，首次发现网络攻击者利用人工智能技术开发"零日漏洞"攻击工具。"零日漏洞"指软件厂商尚未发现或来不及修复的安全漏洞。该工具针对一款流行的开源基于网页的系统管理工具，利用Python脚本实现，可绕过双重认证。谷歌已向受影响公司通报该漏洞并阻断相关威胁活动。</p>
+                <div class="meta">
+                    <span class="source">东方财富网</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>高盛COO：银行业"人力装配线"面临自动化转型</h3>
+                <p class="summary">高盛总裁兼首席运营官约翰·沃尔德龙表示，人工智能的应用正帮助该行在无需大幅增加招聘的情况下扩大业务规模。沃尔德龙把高盛形容为一条"人力装配线"，指出制造业已经变得更加机器人化、自动化，而银行业在这方面的转型程度还没有那么高。他预计后台岗位将越来越多由机器承担，智能体将成为银行业的"机器人"。</p>
+                <div class="meta">
+                    <span class="source">新浪AI热点</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section domestic">
+            <h2 class="section-title domestic">🇨🇳 国内AI要闻</h2>
+            
+            <div class="news-card">
+                <h3>百度搭子DuMate移动App发布：内置AI搜索、秒哒等核心能力</h3>
+                <p class="summary">在Create2026百度AI开发者大会上，百度搭子DuMate推出移动端App，只需一句话就能真干活，实现从"想法"到"结果"自动执行。该产品自MVP版本发布以来快速迭代，任务完成率不断提高，现已可胜任多种复杂工作。DuMate将百度AI搜索、秒哒、伐谋、百科等核心产品能力集成为可随时调用的内置技能，在多个国际权威Agent Benchmark评测中达到SOTA水平。</p>
+                <div class="meta">
+                    <span class="source">新浪科技</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>宇树科技发布全球首款量产版载人机甲，定价390万元起</h3>
+                <p class="summary">宇树科技发布载人变形机甲，定价390万元起。该产品为全球首款量产版载人机甲，可以变形，作为民用交通工具，体重约500kg（载人后）。此外，在首届香港具身智能产业峰会上，智元机器人发布香港具身智能产业共创计划，宣布未来5年将成立香港国际研发总部、数个产研联合实验室，培育数十家创新创业企业，发展数百家产业伙伴，创造数千亿营收产值。</p>
+                <div class="meta">
+                    <span class="source">东方财富网</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>OpenAI与微软达成协议：营收分成款项上限定为380亿美元</h3>
+                <p class="summary">OpenAI与微软达成协议，将双方的总营收分成款项上限设定为380亿美元。微软此前表示，来自OpenAI的营收分成款项将持续至2030年，尽管设有总体上限，但具体支付比例仍将沿用此前双方约定的比例。这一协议标志着两家科技巨头在AI领域的合作关系进一步明确化。</p>
+                <div class="meta">
+                    <span class="source">东方财富网</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>国产芯片光刻胶重大突破：AI加速材料研发</h3>
+                <p class="summary">上海人工智能实验室与厦门大学、苏州实验室等单位合作，基于"书生"科学大模型和"书生"科学发现平台，研制出高纯度、高一致性、高效率的KrF（氟化氪）光刻胶树脂。这一突破使高端光刻胶树脂的稳定制备不再依赖极少数国外企业的"黑箱能力"，探索出一条可标准化、快速迭代的芯片材料研发新路径。联合攻关团队已建立从AI决策到自动化合成的闭环研发体系。</p>
+                <div class="meta">
+                    <span class="source">上观新闻</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+            
+            <div class="news-card">
+                <h3>商汤科技旗下机器人小店落地上海，年内计划开店百家</h3>
+                <p class="summary">商汤科技旗下商汤善惠正式推出SenseMart Go烧卖购机器人小店，并率先落地上海新洲大厦、宝山新业坊、宝山滨江景区。该机器人小店无需人工操作，可自动完成商品售卖全流程。计划于2026年底完成百家门店布局，标志着商汤在AI+零售领域的商业化进程加速。</p>
+                <div class="meta">
+                    <span class="source">东方财富网</span>
+                    <span>2026-05-13</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>📡 AI科技早报 · 每日8:00自动更新</p>
+            <p>由 <a href="https://github.com/ainooo9/openclaw-reports" target="_blank">OpenClaw</a> 自动生成 · 数据来源已核实</p>
+        </div>
+    </div>
+</body>
+</html>
