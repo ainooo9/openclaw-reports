@@ -3,262 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI科技早报 | 2026年5月13日</title>
+    <title>🤖 AI科技早报 | 2026年5月13日</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0d0d2b 100%);
-            min-height: 100vh;
-            color: #e0e0e0;
-            padding: 20px;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; padding: 20px; }
         .container { max-width: 900px; margin: 0 auto; }
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            margin-bottom: 30px;
-        }
-        .header .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        .header h1 {
-            font-size: 32px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00d4ff, #7c3aed, #ff6b9d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-        .header .date {
-            color: #8888aa;
-            font-size: 15px;
-        }
-        .header .time-range {
-            color: #555577;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #667eea55, #764ba2aa, transparent);
-            margin: 30px 0;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            padding: 12px 20px;
-            background: rgba(255,255,255,0.04);
-            border-radius: 12px;
-            border-left: 4px solid;
-        }
-        .section-title.intl { border-color: #00d4ff; }
-        .section-title.domestic { border-color: #ff6b9d; }
-        .section-title .flag { font-size: 22px; }
-        .section-title h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #fff;
-        }
-        .news-item {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 14px;
-            padding: 18px 22px;
-            margin-bottom: 12px;
-            transition: all 0.2s;
-        }
-        .news-item:hover {
-            background: rgba(255,255,255,0.07);
-            border-color: rgba(102,126,234,0.3);
-            transform: translateY(-1px);
-        }
-        .news-item .meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        .news-item .source-tag {
-            background: rgba(102,126,234,0.2);
-            color: #a0b0ff;
-            font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-        .news-item .ai-tag {
-            background: rgba(255,107,157,0.15);
-            color: #ff9ec0;
-            font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        .news-item h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #f0f0ff;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-        .news-item h3 a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .news-item h3 a:hover {
-            color: #00d4ff;
-        }
-        .news-item p {
-            font-size: 14px;
-            color: #8888aa;
-            line-height: 1.7;
-        }
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: #444466;
-            font-size: 13px;
-        }
-        .footer a { color: #667eea; text-decoration: none; }
-        .footer a:hover { text-decoration: underline; }
+        .header { text-align: center; padding: 30px 20px; background: linear-gradient(135deg, #1a1a2e, #16213e); border-radius: 16px; margin-bottom: 24px; border: 1px solid #2a2a4a; }
+        .header h1 { font-size: 28px; color: #fff; margin-bottom: 8px; }
+        .header .date { color: #8888ff; font-size: 14px; }
+        .header .sources { color: #666; font-size: 12px; margin-top: 8px; }
+        .section { background: #1a1a2e; border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #2a2a4a; }
+        .section-title { font-size: 18px; font-weight: 700; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid; display: flex; align-items: center; gap: 8px; }
+        .intl .section-title { border-color: #4a9eff; color: #4a9eff; }
+        .domestic .section-title { border-color: #ff6b6b; color: #ff6b6b; }
+        .news-item { padding: 14px 0; border-bottom: 1px solid #2a2a4a; }
+        .news-item:last-child { border-bottom: none; }
+        .news-item .num { display: inline-block; width: 26px; height: 26px; border-radius: 50%; text-align: center; line-height: 26px; font-size: 12px; font-weight: 700; margin-right: 10px; }
+        .intl .num { background: #4a9eff; color: #fff; }
+        .domestic .num { background: #ff6b6b; color: #fff; }
+        .news-item h3 { font-size: 15px; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+        .news-item .source { font-size: 11px; color: #666; margin-bottom: 4px; }
+        .news-item p { font-size: 13px; color: #999; line-height: 1.6; margin-top: 6px; }
+        .news-item .impact { background: #16213e; border-radius: 8px; padding: 10px 12px; margin-top: 8px; border-left: 3px solid #8888ff; font-size: 12px; color: #b0b0b0; }
+        .impact-label { color: #8888ff; font-weight: 600; margin-right: 4px; }
+        .footer { text-align: center; padding: 20px; color: #555; font-size: 12px; }
+        .footer a { color: #8888ff; text-decoration: none; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <div class="badge">🤖 AI 科技早报</div>
-            <h1>AI 科技早报</h1>
-            <div class="date">2026年5月13日 · 周三</div>
-            <div class="time-range">昨日 18:00 — 今日 08:00 精选</div>
+            <h1>🤖 AI科技早报</h1>
+            <div class="date">📅 2026年5月13日 星期三</div>
+            <div class="sources">📡 来源：TechCrunch、The Verge、36氪、新浪科技、腾讯新闻 等11个来源</div>
         </div>
 
-        <div class="divider"></div>
+        <div class="section intl">
+            <div class="section-title">🌍 国际AI要闻</div>
 
-        <!-- 国际AI要闻 -->
-        <div class="section">
-            <div class="section-title intl">
-                <span class="flag">🌍</span>
-                <h2>国际 AI 要闻</h2>
+            <div class="news-item">
+                <div><span class="num">1</span><h3>Google I/O 前哨战：Android Show 2026 全面拥抱 Gemini</h3></div>
+                <div class="source">📰 36氪 | 2026-05-13</div>
+                <p>作为每年 Google I/O 的前哨站，The Android Show 在线开幕，揭开 2026 年 Google 在 Android 领域全系产品阵容。Gemini 深度整合进 Android 系统，从语音交互到自动操作，AI 能力全面接管移动操作系统底层。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>手机将变得更"懂"你——不再需要手动操作，AI 助手可直接帮你发消息、订餐、安排日程，真正实现"动口不动手"。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪AI热点</span>
-                    <span class="ai-tag">🔥 融资</span>
-                </div>
-                <h3>Anthropic 洽谈融资 300 亿美元，估值超 9000 亿美元</h3>
-                <p>知情人士透露，Anthropic 正与投资者展开初步磋商，计划在新一轮融资中募资至少 300 亿美元，投前估值超过 9000 亿美元。本轮融资最快可能于本月底完成。今年以来，Anthropic 凭借 Claude 系列模型的商业化成功，ARR 已突破 300 亿美元，首次在收入和估值上同时领先 OpenAI。</p>
+                <div><span class="num">2</span><h3>OpenAI 前CTO Mira Murati 创立 Thinking Machines Lab，首款模型剑指 ChatGPT</h3></div>
+                <div class="source">📰 36氪 | 2026-05-13</div>
+                <p>Mira Murati 离开 OpenAI 后创立 Thinking Machines Lab，发布首款研究预览交互模型。与传统"回合制"对话不同，新模型追求《Her》电影中 Samantha 那样的"不等你说完即可开口、能感知语气迟疑"的自然交互体验。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>AI 助手将从"你问我答"升级为真正的对话伙伴，交流更自然流畅，社恐人群尤其实用。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪财经</span>
-                    <span class="ai-tag">⚠️ 安全</span>
-                </div>
-                <h3>谷歌首度证实：黑客已开始用 AI 发动真实网络攻击</h3>
-                <p>谷歌发布报告，首次确认犯罪黑客已使用 AI 大模型发现了一个此前未知的零日漏洞，并差点发动大规模攻击。这一事件意味着安全界担心多年的"AI 自动挖洞"已从理论变为现实。在 Anthropic 的 Mythos 模型已找到数千个零日漏洞的背景下，这可能只是冰山一角。</p>
+                <div><span class="num">3</span><h3>Anthropic 正洽谈融资 300 亿美元，估值超 9000 亿美元</h3></div>
+                <div class="source">📰 新浪财经 | 2026-05-13</div>
+                <p>知情人士称，Anthropic 正与投资者展开初步磋商，计划新一轮融资募资至少 300 亿美元，以超过 9000 亿美元的投前估值进行融资。本轮融资最快可能在本月底完成。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>AI 安全赛道持续火热，Claude 企业级工具（Claude Code、Cowork）正在快速普及，相关 AI 服务将更稳定可靠。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">搜狐</span>
-                    <span class="ai-tag">🔒 安全</span>
-                </div>
-                <h3>OpenAI 发布 Daybreak 安全项目：对标 Anthropic，将安全检查融入日常开发</h3>
-                <p>OpenAI 正式发布名为 Daybreak 的安全项目，旨在将安全审查机制深度整合到日常代码开发流程中。核心理念是"安全左移"，即在代码编写阶段就嵌入安全检查，而非在模型部署后进行事后审查，被视为对标 Anthropic 安全路线的直接回应。</p>
+                <div><span class="num">4</span><h3>OpenAI 发布 GPT-5.4-Cyber：专为网络安全防御场景打造</h3></div>
+                <div class="source">📰 小宇宙播客 | 2026-04-18</div>
+                <p>OpenAI 宣布扩大 Trusted Access for Cyber，并推出面向防御性网络安全场景的 GPT-5.4-Cyber。同时 Anthropic 也在同月发布 Responsible Scaling Policy 3.1，重点补充了自动化研发阈值与风险报告机制。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>AI 在网络安全领域的应用加速，普通人的在线账户、银行卡等将获得更智能的 AI 防御保护。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">TechCrunch</span>
-                    <span class="ai-tag">🏥 AI应用</span>
-                </div>
-                <h3>Medicare 新支付模式专为 AI 设计，科技界多数人尚不知情</h3>
-                <p>美国医疗保险推出了名为 ACCESS 的新支付模式，首次为监控患者健康、打电话随访、协调住房推荐等 AI 代理服务提供报销机制。这一政府层面的支付创新，被认为是 AI 医疗健康商业化落地的重要里程碑。</p>
+                <div><span class="num">5</span><h3>DeepSeek 开源生态持续扩张，全球开发者基于 DeepSeek "手搓"爆款工具</h3></div>
+                <div class="source">📰 新浪AI热点 | 2026-05-13</div>
+                <p>一位美国开发者在 GitHub 上分享了基于 DeepSeek "手搓"的爆款工具并迅速走红。他在接受采访时表示：DeepSeek 不只是模型本身，更意味着一种开源生态，让"技术黑箱"变成"可任意搭建组装的积木"。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>开源 AI 降低技术门槛，更多中小企业和个人开发者能以低成本获得强大 AI 能力，推动 AI 应用加速落地。</div>
             </div>
-
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">TechCrunch</span>
-                    <span class="ai-tag">⚖️ 法律</span>
-                </div>
-                <h3>Altman 作证：马斯克曾考虑将 OpenAI 交给自己的孩子</h3>
-                <p>在 OpenAI 诉讼案庭审中，CEO Altman 透露马斯克曾考虑将 OpenAI 交给自己的孩子。Altman 表示，OpenAI 成立的核心原则是防止先进 AI 被任何一个人控制，这也是他当初对 Y Combinator 那些保持控制权的创始人深感顾虑的原因。</p>
-            </div>
-
         </div>
 
-        <!-- 国内AI要闻 -->
-        <div class="section">
-            <div class="section-title domestic">
-                <span class="flag">🇨🇳</span>
-                <h2>国内 AI 要闻</h2>
+        <div class="section domestic">
+            <div class="section-title">🇨🇳 国内AI要闻</div>
+
+            <div class="news-item">
+                <div><span class="num">1</span><h3>宇树科技发布全球首款量产载人变形机甲，定价 390 万元起</h3></div>
+                <div class="source">📰 界面新闻 | 2026-05-13</div>
+                <p>5月12日，宇树科技发布全球首款量产版载人机甲，可变形为民用交通工具，体重约 500kg（载人后）。同时，宇树科技创始人王兴兴带队到访中国华能，探索"能源+算力+具身智能"跨界合作。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>人形机器人从实验室走向商业化，未来工厂、物流等领域将加速普及机器人劳动替代。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪科技</span>
-                    <span class="ai-tag">🌟 独家</span>
-                </div>
-                <h3>李彦宏：AI 时代的度量衡是日活智能体数（DAA）</h3>
-                <p>在 Create2026 百度 AI 开发者大会上，李彦宏提出 AI 时代的核心指标应该是"日活智能体数"（Daily Active Agents，DAA），与移动互联网的 DAU 相对应。李彦宏表示，Token 衡量的是成本而非收益，而智能体数量才是衡量 AI 价值的最终答案。</p>
+                <div><span class="num">2</span><h3>具身智能投资爆火：2026年融资额已超去年全年，单笔10亿+融资超10起</h3></div>
+                <div class="source">📰 经济参考报 | 2026-05-13</div>
+                <p>《经济参考报》报道，具身智能领域投资热度不减。截至5月11日，2026年国内具身智能领域投资总额已超2025年全年，单笔10亿元及以上融资超过10起。机构关注重点正从"讲故事"转向"交付能力"。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>资本疯狂涌入具身智能，人形机器人走进生活场景的速度可能比想象中更快。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪AI热点</span>
-                    <span class="ai-tag">🏆 IPO</span>
-                </div>
-                <h3>剂泰科技港交所挂牌上市：募资超 21 亿港元，成全球 AI 药物递送第一股</h3>
-                <p>剂泰科技今日在港交所成功挂牌上市，首次公开募股共募资超 21 亿港元，并获得超过 6900 倍超额认购，成为全球 AI 药物递送领域第一股，AI 在制药行业的商业化落地再迎标志性事件。</p>
+                <div><span class="num">3</span><h3>智元机器人：人形机器人的"ChatGPT时刻"可能在2026年或2027年</h3></div>
+                <div class="source">📰 证券时报 | 2026-05-13</div>
+                <p>智元机器人通用业务部总裁王闯表示："过去机器人只要能'动一动'就足以令人振奋，但现在市场胃口越来越大，不再满足于纯粹的表演性展示。"人形机器人真正"干活"的时代临近。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>未来2-3年内，消费者可能看到机器人在门店导购、工厂流水线等场景真正上岗就业。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">东方财富</span>
-                    <span class="ai-tag">🤖 机器人</span>
-                </div>
-                <h3>宇树科技发布载人变形机甲，定价 390 万元起</h3>
-                <p>5 月 12 日，宇树科技发布全球首款量产版载人机甲，可变形为民用交通工具，车身重量约 500kg（载人后），定价 390 万元起。与此同时，宇树科技创始人王兴兴带队访问中国华能，探索具身智能与能源行业的深度融合。</p>
+                <div><span class="num">4</span><h3>大厂分拆潮轮到AI：快手可灵以200亿美元估值融资，阿里百度芯片业务独立上市</h3></div>
+                <div class="source">📰 36氪 | 2026-05-13</div>
+                <p>继阿里平头哥、百度昆仑芯宣布独立上市后，快手旗下AI视频产品可灵也宣布以200亿美元估值融资。互联网大厂正通过分拆AI业务获取更高估值与融资灵活性。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>AI 视频、AI 芯片等领域独立发展，意味着更多垂直 AI 应用（如 AI 视频生成）将快速进入普通人生活。</div>
             </div>
 
             <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">财联社</span>
-                    <span class="ai-tag">🦾 机器人</span>
-                </div>
-                <h3>韩国首尔国立大学研制智能人造肌肉，可同时感知与驱动</h3>
-                <p>韩国首尔国立大学科学家从生物肌肉—肌腱复合体中汲取灵感，研制出可同时执行传感和致动功能的智能人造肌肉。这一突破在下一代人形机器人领域展现巨大应用潜力，论文已发表于最新一期《先进材料》杂志。</p>
+                <div><span class="num">5</span><h3>中信建投：全球算力投资强劲增长，2026年或见证ARR达2000亿美元的AI公司</h3></div>
+                <div class="source">📰 中信建投策略报告 | 2026-05-13</div>
+                <p>中信建投发布通信及人工智能2026年中期投资策略称，全球大模型产业迈入"效率优先、商业落地、生态重构"新阶段。北美四大CSP厂商2026年一季度资本开支同比增长70.25%，全年预计高达7100亿美元。</p>
+                <div class="impact"><span class="impact-label">💡对普通人的影响：</span>算力基础设施建设狂飙，AI 模型成本持续下降，普通人使用 AI 的成本将越来越低。</div>
             </div>
-
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">36氪</span>
-                    <span class="ai-tag">💰 融资</span>
-                </div>
-                <h3>「方石机器人」完成近亿元 A 轮融资，深耕具身智能 + 建筑大模型</h3>
-                <p>建筑机器人企业方石机器人宣布完成近亿元 A 轮融资，公司专注于"具身智能 + 建筑大模型"技术底座，瞄准万亿级建筑业智能化改造市场。此外，清华系光计算芯片企业也完成数千万元天使轮融资，布局全波光计算架构。</p>
-            </div>
-
         </div>
 
         <div class="footer">
-            <p>📖 完整报告发布于 <a href="https://ainooo9.github.io/openclaw-reports/ai_daily_news_2026-05-13.html">GitHub Pages</a></p>
-            <p style="margin-top: 8px; color: #333355;">由 OpenClaw AI 科技早报系统生成 · 2026-05-13</p>
+            <p>📖 完整报告链接：<a href="https://ainooo9.github.io/openclaw-reports/ai_daily_news_2026-05-13.html">https://ainooo9.github.io/openclaw-reports/ai_daily_news_2026-05-13.html</a></p>
+            <p style="margin-top:8px;">🤖 由 OpenClaw AI 科技早报系统生成 | 2026-05-13</p>
         </div>
     </div>
 </body>
