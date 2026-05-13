@@ -1,265 +1,123 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI科技早报 | 2026年5月13日</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
-            background: linear-gradient(135deg, #0a0a1a 0%, #1a1a3e 50%, #0d0d2b 100%);
-            min-height: 100vh;
-            color: #e0e0e0;
-            padding: 20px;
-        }
-        .container { max-width: 900px; margin: 0 auto; }
-        .header {
-            text-align: center;
-            padding: 40px 20px;
-            margin-bottom: 30px;
-        }
-        .header .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 15px;
-            letter-spacing: 1px;
-        }
-        .header h1 {
-            font-size: 32px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #00d4ff, #7c3aed, #ff6b9d);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
-        }
-        .header .date {
-            color: #8888aa;
-            font-size: 15px;
-        }
-        .header .time-range {
-            color: #555577;
-            font-size: 13px;
-            margin-top: 5px;
-        }
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #667eea55, #764ba2aa, transparent);
-            margin: 30px 0;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 20px;
-            padding: 12px 20px;
-            background: rgba(255,255,255,0.04);
-            border-radius: 12px;
-            border-left: 4px solid;
-        }
-        .section-title.intl { border-color: #00d4ff; }
-        .section-title.domestic { border-color: #ff6b9d; }
-        .section-title .flag { font-size: 22px; }
-        .section-title h2 {
-            font-size: 18px;
-            font-weight: 700;
-            color: #fff;
-        }
-        .news-item {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 14px;
-            padding: 18px 22px;
-            margin-bottom: 12px;
-            transition: all 0.2s;
-        }
-        .news-item:hover {
-            background: rgba(255,255,255,0.07);
-            border-color: rgba(102,126,234,0.3);
-            transform: translateY(-1px);
-        }
-        .news-item .meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 8px;
-        }
-        .news-item .source-tag {
-            background: rgba(102,126,234,0.2);
-            color: #a0b0ff;
-            font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-weight: 600;
-        }
-        .news-item .ai-tag {
-            background: rgba(255,107,157,0.15);
-            color: #ff9ec0;
-            font-size: 11px;
-            padding: 2px 8px;
-            border-radius: 4px;
-        }
-        .news-item h3 {
-            font-size: 16px;
-            font-weight: 700;
-            color: #f0f0ff;
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-        .news-item h3 a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .news-item h3 a:hover {
-            color: #00d4ff;
-        }
-        .news-item p {
-            font-size: 14px;
-            color: #8888aa;
-            line-height: 1.7;
-        }
-        .footer {
-            text-align: center;
-            padding: 30px;
-            color: #444466;
-            font-size: 13px;
-        }
-        .footer a { color: #667eea; text-decoration: none; }
-        .footer a:hover { text-decoration: underline; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI科技早报 | 2026年5月13日</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f7f9fc; color: #1a1a2e; max-width: 800px; margin: 0 auto; padding: 20px; }
+.header { text-align: center; padding: 24px 0 20px; border-bottom: 2px solid #1a1a2e; margin-bottom: 28px; }
+.header .date { font-size: 13px; color: #888; letter-spacing: 2px; margin-bottom: 6px; }
+.header h1 { font-size: 26px; font-weight: 800; color: #1a1a2e; letter-spacing: 3px; }
+.header h1 span { color: #2563eb; }
+.section { margin-bottom: 32px; }
+.section-title { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1.5px solid #e5e7eb; }
+.flag { font-size: 20px; }
+.section-title h2 { font-size: 17px; font-weight: 700; color: #1a1a2e; }
+.news-card { background: #fff; border-radius: 12px; padding: 16px 18px; margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
+.news-card:hover { box-shadow: 0 4px 12px rgba(37,99,235,0.1); }
+.news-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin-bottom: 6px; line-height: 1.5; }
+.news-desc { font-size: 13px; color: #6b7280; line-height: 1.7; margin-bottom: 6px; }
+.news-impact { font-size: 12px; color: #2563eb; font-weight: 600; background: #eff6ff; padding: 3px 10px; border-radius: 20px; display: inline-block; }
+.news-source { font-size: 11px; color: #9ca3af; margin-top: 6px; }
+.footer { text-align: center; padding: 20px 0; color: #9ca3af; font-size: 12px; border-top: 1px solid #e5e7eb; margin-top: 30px; }
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="badge">🤖 AI 科技早报</div>
-            <h1>AI 科技早报</h1>
-            <div class="date">2026年5月13日 · 周三</div>
-            <div class="time-range">昨日 18:00 — 今日 08:00 精选</div>
-        </div>
 
-        <div class="divider"></div>
+<div class="header">
+  <div class="date">2026年5月13日 · 周三 · 北京时间</div>
+  <h1>🤖 <span>AI</span>科技早报</h1>
+</div>
 
-        <!-- 国际AI要闻 -->
-        <div class="section">
-            <div class="section-title intl">
-                <span class="flag">🌍</span>
-                <h2>国际 AI 要闻</h2>
-            </div>
+<div class="section">
+  <div class="section-title">
+    <span class="flag">🌍</span>
+    <h2>国际AI要闻</h2>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪AI热点</span>
-                    <span class="ai-tag">🔥 融资</span>
-                </div>
-                <h3>Anthropic 洽谈融资 300 亿美元，估值超 9000 亿美元</h3>
-                <p>知情人士透露，Anthropic 正与投资者展开初步磋商，计划在新一轮融资中募资至少 300 亿美元，投前估值超过 9000 亿美元。本轮融资最快可能于本月底完成。今年以来，Anthropic 凭借 Claude 系列模型的商业化成功，ARR 已突破 300 亿美元，首次在收入和估值上同时领先 OpenAI。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">1. Medicare全新支付模式专为AI设计</div>
+    <div class="news-desc">美国医疗保险推出新支付模式ACCESS，首次为监控患者、协调转诊的AI智能体提供报销机制，覆盖AI驱动的患者管理全流程。</div>
+    <span class="news-impact">影响：AI医疗规模化落地加速</span>
+    <div class="news-source">来源：TechCrunch · 2026-05-12</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪财经</span>
-                    <span class="ai-tag">⚠️ 安全</span>
-                </div>
-                <h3>谷歌首度证实：黑客已开始用 AI 发动真实网络攻击</h3>
-                <p>谷歌发布报告，首次确认犯罪黑客已使用 AI 大模型发现了一个此前未知的零日漏洞，并差点发动大规模攻击。这一事件意味着安全界担心多年的"AI 自动挖洞"已从理论变为现实。在 Anthropic 的 Mythos 模型已找到数千个零日漏洞的背景下，这可能只是冰山一角。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">2. 传Google与SpaceX合作建设太空数据中心</div>
+    <div class="news-desc">Google与SpaceX正洽谈在轨道部署数据中心，以太空作为AI算力未来栖息地，虽成本远高于地面但具战略价值。</div>
+    <span class="news-impact">影响：AI算力基础设施新范式</span>
+    <div class="news-source">来源：TechCrunch · 2026-05-12</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">搜狐</span>
-                    <span class="ai-tag">🔒 安全</span>
-                </div>
-                <h3>OpenAI 发布 Daybreak 安全项目：对标 Anthropic，将安全检查融入日常开发</h3>
-                <p>OpenAI 正式发布名为 Daybreak 的安全项目，旨在将安全审查机制深度整合到日常代码开发流程中。核心理念是"安全左移"，即在代码编写阶段就嵌入安全检查，而非在模型部署后进行事后审查，被视为对标 Anthropic 安全路线的直接回应。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">3. Anthropic融资300亿美元 估值超9000亿</div>
+    <div class="news-desc">Anthropic正与投资者磋商300亿美元新融资，估值超9000亿美元，有望成全球最大AI融资案，最快本月底落地。</div>
+    <span class="news-impact">影响：AI估值再创历史新高</span>
+    <div class="news-source">来源：新浪财经 · 2026-05-13</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">TechCrunch</span>
-                    <span class="ai-tag">🏥 AI应用</span>
-                </div>
-                <h3>Medicare 新支付模式专为 AI 设计，科技界多数人尚不知情</h3>
-                <p>美国医疗保险推出了名为 ACCESS 的新支付模式，首次为监控患者健康、打电话随访、协调住房推荐等 AI 代理服务提供报销机制。这一政府层面的支付创新，被认为是 AI 医疗健康商业化落地的重要里程碑。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">4. OpenAI与微软营收分成上限380亿美元</div>
+    <div class="news-desc">微软已从OpenAI获得300亿美元回报，双方将营收分成上限定为380亿美元，深度绑定关系持续深化。</div>
+    <span class="news-impact">影响：AI巨头利益捆绑加深</span>
+    <div class="news-source">来源：东方财富 · 2026-05-13</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">TechCrunch</span>
-                    <span class="ai-tag">⚖️ 法律</span>
-                </div>
-                <h3>Altman 作证：马斯克曾考虑将 OpenAI 交给自己的孩子</h3>
-                <p>在 OpenAI 诉讼案庭审中，CEO Altman 透露马斯克曾考虑将 OpenAI 交给自己的孩子。Altman 表示，OpenAI 成立的核心原则是防止先进 AI 被任何一个人控制，这也是他当初对 Y Combinator 那些保持控制权的创始人深感顾虑的原因。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">5. Anthropic警告投资者勿通过二级平台购股</div>
+    <div class="news-desc">Anthropic发声明称，任何通过第三方二级平台进行股份交易的行为均属无效，公司不承认此类转让。</div>
+    <span class="news-impact">影响：AI独角兽股东管理趋严</span>
+    <div class="news-source">来源：TechCrunch · 2026-05-12</div>
+  </div>
+</div>
 
-        </div>
+<div class="section">
+  <div class="section-title">
+    <span class="flag">🇨🇳</span>
+    <h2>国内AI要闻</h2>
+  </div>
 
-        <!-- 国内AI要闻 -->
-        <div class="section">
-            <div class="section-title domestic">
-                <span class="flag">🇨🇳</span>
-                <h2>国内 AI 要闻</h2>
-            </div>
+  <div class="news-card">
+    <div class="news-title">1. 宇树科技发布全球首款量产载人机甲</div>
+    <div class="news-desc">宇树科技发布载人变形机甲GD01，可直立行走与四足爬行双模式，定价390万元起（约73万新元），定位民用交通工具。</div>
+    <span class="news-impact">影响：中国人形机器人商业化里程碑</span>
+    <div class="news-source">来源：联合早报 · 2026-05-12</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪科技</span>
-                    <span class="ai-tag">🌟 独家</span>
-                </div>
-                <h3>李彦宏：AI 时代的度量衡是日活智能体数（DAA）</h3>
-                <p>在 Create2026 百度 AI 开发者大会上，李彦宏提出 AI 时代的核心指标应该是"日活智能体数"（Daily Active Agents，DAA），与移动互联网的 DAU 相对应。李彦宏表示，Token 衡量的是成本而非收益，而智能体数量才是衡量 AI 价值的最终答案。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">2. 快手回应可灵AI独立上市传闻</div>
+    <div class="news-desc">快手公告称正评估可灵AI引入外部融资及独立上市方案，拟进一步利用外部财务资源，方案仍处于初步阶段。</div>
+    <span class="news-impact">影响：AI视频业务分拆预期升温</span>
+    <div class="news-source">来源：新浪财经 · 2026-05-13</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">新浪AI热点</span>
-                    <span class="ai-tag">🏆 IPO</span>
-                </div>
-                <h3>剂泰科技港交所挂牌上市：募资超 21 亿港元，成全球 AI 药物递送第一股</h3>
-                <p>剂泰科技今日在港交所成功挂牌上市，首次公开募股共募资超 21 亿港元，并获得超过 6900 倍超额认购，成为全球 AI 药物递送领域第一股，AI 在制药行业的商业化落地再迎标志性事件。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">3. 剂泰科技港交所上市 募资超21亿港元</div>
+    <div class="news-desc">剂泰科技今日在港交所挂牌上市，成全球AI药物递送第一股，IPO获超6900倍超额认购，募资超21亿港元。</div>
+    <span class="news-impact">影响：AI制药赛道受资本追捧</span>
+    <div class="news-source">来源：新浪AI热点 · 2026-05-13</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">东方财富</span>
-                    <span class="ai-tag">🤖 机器人</span>
-                </div>
-                <h3>宇树科技发布载人变形机甲，定价 390 万元起</h3>
-                <p>5 月 12 日，宇树科技发布全球首款量产版载人机甲，可变形为民用交通工具，车身重量约 500kg（载人后），定价 390 万元起。与此同时，宇树科技创始人王兴兴带队访问中国华能，探索具身智能与能源行业的深度融合。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">4. AI人才需求攀升 百度校招九成岗位与AI相关</div>
+    <div class="news-desc">正值高校毕业生求职关键期，AI人才需求攀升，百度校招超九成岗位与AI相关，大模型算法工程师成热门。</div>
+    <span class="news-impact">影响：AI就业市场持续火爆</span>
+    <div class="news-source">来源：新华网 · 2026-05-13</div>
+  </div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">财联社</span>
-                    <span class="ai-tag">🦾 机器人</span>
-                </div>
-                <h3>韩国首尔国立大学研制智能人造肌肉，可同时感知与驱动</h3>
-                <p>韩国首尔国立大学科学家从生物肌肉—肌腱复合体中汲取灵感，研制出可同时执行传感和致动功能的智能人造肌肉。这一突破在下一代人形机器人领域展现巨大应用潜力，论文已发表于最新一期《先进材料》杂志。</p>
-            </div>
+  <div class="news-card">
+    <div class="news-title">5. 2026世界数字教育大会聚焦"人工智能教育"</div>
+    <div class="news-desc">2026世界数字教育大会在杭州举办，"人工智能+教育"成为核心议题，产业与教育融合趋势加速。</div>
+    <span class="news-impact">影响：AI教育落地提速</span>
+    <div class="news-source">来源：东方财富 · 2026-05-13</div>
+  </div>
+</div>
 
-            <div class="news-item">
-                <div class="meta">
-                    <span class="source-tag">36氪</span>
-                    <span class="ai-tag">💰 融资</span>
-                </div>
-                <h3>「方石机器人」完成近亿元 A 轮融资，深耕具身智能 + 建筑大模型</h3>
-                <p>建筑机器人企业方石机器人宣布完成近亿元 A 轮融资，公司专注于"具身智能 + 建筑大模型"技术底座，瞄准万亿级建筑业智能化改造市场。此外，清华系光计算芯片企业也完成数千万元天使轮融资，布局全波光计算架构。</p>
-            </div>
+<div class="footer">
+  由 OpenClaw AI 驱动 · 数据来源：TechCrunch / The Verge / Ars Technica / 新浪 / 36氪 / 联合早报 / 东方财富 等
+</div>
 
-        </div>
-
-        <div class="footer">
-            <p>📖 完整报告发布于 <a href="https://ainooo9.github.io/openclaw-reports/ai_daily_news_2026-05-13.html">GitHub Pages</a></p>
-            <p style="margin-top: 8px; color: #333355;">由 OpenClaw AI 科技早报系统生成 · 2026-05-13</p>
-        </div>
-    </div>
 </body>
 </html>
